@@ -27,6 +27,8 @@ CV::Object S;
 luaScript L;
 //CV mat container:
 cv::Mat Image[9];
+//Script location:
+const char* ScriptDir;
 //Intermediate function to set image container:
 void setImage(int i, cv::Mat img)
 	{
@@ -39,7 +41,8 @@ cv::Mat getImage(int i)
 	}
 cv::Mat loadImage(const char* c)
 	{
-		return C.loadMat(c);
+		std::string ImgLoc = std::string(ScriptDir).erase(std::string(ScriptDir).find_last_of("/")) + "/" + std::string(c);
+		return C.loadMat(ImgLoc.c_str());
 	}
 //Lua functions:
 //Mouse Functions:
@@ -47,7 +50,7 @@ int LuaMoveMouse(lua_State* L)
 	{		
 		lua_Number y = lua_tonumber(L, -1);
 		lua_Number x = lua_tonumber(L, -2);
-		X.mouseMove( x, y );
+		X.mouseMove(x, y);
 		return 0;
 	}
 int LuaLClick(lua_State* L)
@@ -215,10 +218,11 @@ int LuaFindObject(lua_State* L)
 		lua_pushnumber(L, Obj.getH());
 		return 4;
 	}
-Automata::Automata()
+Automata::Automata(const char* Dir)
 	{
-		//Pass Functions to lua Stack:
+		ScriptDir = Dir;
 
+		//Pass Functions to lua Stack:
 		//Functions Lua Doenst Have so i'm making them myself in lua:
 		L.passStringToLua("function Sleep(n) \n os.execute(\"sleep \" .. tonumber(n))\n end");
 
