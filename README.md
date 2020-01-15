@@ -89,38 +89,70 @@ Releases a keyboard command key:
 ```
 KeyboardCharRelease(CommandKey);
 ```
-
 Command Keys are supplied to the function as their names.
 Examples:
 ```
 Esc, Enter, Backspace, Shift, Alt, Ctrl, Tab,
 ```
-
 Locks:
 ```
 CapsLock, NumLock,
 ```
-
 Windows key:
 ```
 Win
 ```
-
 Arrow Keys:
 ```
 Up, Down, Right, Left
 ```
-
 F Keys:
 ```
 F1-F12
 ```
+
+#### Image IDs:
+
+Due to lua limitations and lack of class support Automata currently has a limited number of images it can store.
+This number is currently set to 10 images by default.(Might be expanded later)
+These images can be referenced from memory using their image ID number.
+These are indexed from 0 to 9;
+
 #### Image acquisition:
 
 Automata hosts 2 mains ways of aquiring images.
-Taking a screenshot from X11, and loading an image from memory.
+Taking a screenshot from X11:
+```
+Screenshot(int ImageID, int x, int y, int w, int h)
+```
+And Loading an image from memory:
+```
+LoadImage(int ImageId, string ImageLocation);
+```
 
+#### Image view:
 
+For testing reasons Automata allows for image viewing from a script.
+```
+ShowImage(int ImageId);
+```
+
+#### Sleep:
+ Lua does not wait for a C function to finish executing to run the next function.
+This could lead to errors in scripts
+This is currently fixed by using a sleep function.
+Sleep takes a flot as a variable and waits for a given amount of time.
+0.5 waits for 500ms
+1 waits form i second
+```
+Sleep(float Time);
+```
+
+#### OCR
+Optical character recognition is used to scrape text from iamges and returns a string:
+```
+GetTextFromImage(int ImageID)
+```
 
 ### Authors:
 
