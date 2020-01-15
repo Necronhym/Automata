@@ -148,7 +148,12 @@ Sleep takes a flot as a variable and waits for a given amount of time.
 Sleep(float Time);
 ```
 
-#### OCR:
+#### Image Processing:
+
+
+#### Extractiong Data From Images:
+
+###### OCR:
 Optical character recognition is used to scrape text from iamges and returns a string:
 ```
 GetTextFromImage(int ImageID);
