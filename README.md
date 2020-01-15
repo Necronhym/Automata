@@ -138,8 +138,8 @@ ShowImage(int ImageId);
 ```
 
 ### Sleep:
- Lua does not wait for a C function to finish executing to run the next function.
-This could lead to errors in scripts
+Lua doesn't wait for a C function to finish executing to run the next function.
+This could lead to errors in scripts.
 This is currently fixed by using a sleep function.
 Sleep takes a flot as a variable and waits for a given amount of time.
 0.5 waits for 500ms
@@ -150,8 +150,26 @@ Sleep(float Time);
 
 ### Image Processing:
 
+#### Cropping:
+```
+CropImage(int IDtoSaveImageTo, int ImageToCrop, int x, int y, int w, int h);
+```
+#### Filtering:
+Values for Hue, Saturation and Value go from 0-255
+Masking method defines the filtering method. 
+0 results in removing all pixels that are not inside filter parameters
+1 results in removing all pixels that are inside the filter parameters
+```
+FilterImage(int IDtoSaveImageTo, int ImageToFilter, int HighHue, int LowHue, int HighSaturation, int LowSaturation, int HighValue, int LowValue, bool MatchingMethon);
+```
+#### AlphaMasking:
+
 
 ### Extractiong Data From Images:
+
+#### Templet Mathing:
+
+#### Object Detection:
 
 #### OCR:
 Optical character recognition is used to scrape text from iamges and returns a string:
