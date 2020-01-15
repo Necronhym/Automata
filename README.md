@@ -143,7 +143,7 @@ This could lead to errors in scripts
 This is currently fixed by using a sleep function.
 Sleep takes a flot as a variable and waits for a given amount of time.
 0.5 waits for 500ms
-1 waits form i second
+1 waits form 1 second
 ```
 Sleep(float Time);
 ```
