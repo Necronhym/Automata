@@ -40,7 +40,7 @@ This will run the example script. To run your own custom script replace the exam
 Automata hosts a diverse tool set of functions designed for responsive automation.
 Currently supported functions, and examples on how to use them include:
 
-#### Mouse Actions: 
+### Mouse Actions: 
 
 Move the mouse to a given location:
 ```
@@ -71,7 +71,7 @@ Release middle mouse button:
 LRelease();
 ```
 
-#### Keyboard Acrions:
+### Keyboard Acrions:
 
 Presses a keyboard character:
 ```
@@ -118,7 +118,7 @@ This number is currently set to 10 images by default.(Might be expanded later)
 These images can be referenced from memory using their image ID number.
 These are indexed from 0 to 9;
 
-#### Image acquisition:
+### Image acquisition:
 
 Automata hosts 2 mains ways of aquiring images.
 Taking a screenshot from X11:
@@ -130,14 +130,14 @@ And Loading an image from memory:
 LoadImage(int ImageId, string ImageLocation);
 ```
 
-#### Image view:
+### Image view:
 
 For testing reasons Automata allows for image viewing from a script.
 ```
 ShowImage(int ImageId);
 ```
 
-#### Sleep:
+### Sleep:
  Lua does not wait for a C function to finish executing to run the next function.
 This could lead to errors in scripts
 This is currently fixed by using a sleep function.
@@ -148,12 +148,12 @@ Sleep takes a flot as a variable and waits for a given amount of time.
 Sleep(float Time);
 ```
 
-#### Image Processing:
+### Image Processing:
 
 
-#### Extractiong Data From Images:
+### Extractiong Data From Images:
 
-###### OCR:
+#### OCR:
 Optical character recognition is used to scrape text from iamges and returns a string:
 ```
 GetTextFromImage(int ImageID);
