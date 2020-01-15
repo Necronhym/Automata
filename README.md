@@ -1,6 +1,6 @@
 # Automata
 
-Automata is an X11 based automation platform for GNU/Linux. It utilizes Lua scripting for automation, OpenCV for image processing, object detection and filtering, and tesseract-orc for optical character recognition
+Automata is an X11 based automation platform for GNU/Linux. It utilizes Lua scripting for automation, OpenCV for image processing, object detection and filtering, and tesseract-orc for optical character recognition.
 
 ## Getting Started:
 
