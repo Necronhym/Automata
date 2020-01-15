@@ -37,7 +37,29 @@ This will run the example script. To run your own custom script replace the exam
 
 ## Scripting:
 
-Here are examples of Automata in use:
+Automata hosts a diverse tool set of functions designed for responsive automation.
+Currently supported functions, and examples on how to use them include:
+
+#### Mouse Actions: 
+
+```
+--Move the mouse to a given location:
+MoveMouse(x, y);
+
+--Perform a right mouse button press:
+RClick();
+--Release right mouse button:
+RRelease();
+
+--Perform a left button press:
+LClick();
+--Release left mouse button
+LRelease();
+```
+
+#### Keyboard Acrions:
+
+
 
 ### Authors:
 
