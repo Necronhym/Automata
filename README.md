@@ -44,7 +44,7 @@ Currently supported functions, and examples on how to use them include:
 
 ```
 --Move the mouse to a given location:
-MoveMouse(x, y);
+MoveMouse(int x, int y);
 
 --Perform a right mouse button press:
 RClick();
@@ -64,7 +64,42 @@ LRelease();
 
 #### Keyboard Acrions:
 
+```
+--Presses a keyboard character:
+KeyboardCharPress( char c);
+--Releases a keyboard character:
+KeyboardCharRelease(char c);
 
+--Presses a keyboard command kaye:
+KeyboardCharPress(CommandKey);
+--Releases a keyboard command key:
+KeyboardCharRelease(CommandKey);
+```
+Command Keys are supplied to the function as their names.
+Examples:
+```
+Esc, Enter, Backspace, Shift, Alt, Ctrl, Tab,
+```
+
+Locks:
+```
+CapsLock, NumLock,
+```
+
+Windows key:
+```
+Win
+```
+
+Arrow Keys:
+```
+Up, Down, Right, Left
+```
+
+F Keys:
+```
+F1-F12
+```
 
 ### Authors:
 
