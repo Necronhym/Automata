@@ -42,39 +42,54 @@ Currently supported functions, and examples on how to use them include:
 
 #### Mouse Actions: 
 
+Move the mouse to a given location:
 ```
---Move the mouse to a given location:
 MoveMouse(int x, int y);
-
---Perform a right mouse button press:
+```
+Perform a right mouse button press:
+```
 RClick();
---Release right mouse button:
+```
+Release right mouse button:
+```
 RRelease();
-
---Perform a left button press:
+```
+Perform a left button press:
+```
 LClick();
---Release left mouse button:
+```
+Release left mouse button:
+```
 LRelease();
-
---Perform a middle button press:
+```
+Perform a middle button press:
+```
 LClick();
---Release middle mouse button:
+```
+Release middle mouse button:
+```
 LRelease();
 ```
 
 #### Keyboard Acrions:
 
+Presses a keyboard character:
 ```
---Presses a keyboard character:
 KeyboardCharPress( char c);
---Releases a keyboard character:
+```
+Releases a keyboard character:
+```
 KeyboardCharRelease(char c);
-
---Presses a keyboard command kaye:
+```
+Presses a keyboard command kaye:
+```
 KeyboardCharPress(CommandKey);
---Releases a keyboard command key:
+```
+Releases a keyboard command key:
+```
 KeyboardCharRelease(CommandKey);
 ```
+
 Command Keys are supplied to the function as their names.
 Examples:
 ```
@@ -100,6 +115,12 @@ F Keys:
 ```
 F1-F12
 ```
+#### Image acquisition:
+
+Automata hosts 2 mains ways of aquiring images.
+Taking a screenshot from X11, and loading an image from memory.
+
+
 
 ### Authors:
 
