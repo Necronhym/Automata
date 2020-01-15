@@ -53,7 +53,7 @@ RRelease();
 
 --Perform a left button press:
 LClick();
---Release left mouse button
+--Release left mouse button:
 LRelease();
 ```
 
