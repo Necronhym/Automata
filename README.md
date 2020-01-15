@@ -159,7 +159,7 @@ Optical character recognition is used to scrape text from iamges and returns a s
 GetTextFromImage(int ImageID);
 ```
 
-### Authors:
+## Authors:
 
 * **Necronhym (N3cr0)** - *Initial work* -
 
