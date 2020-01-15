@@ -70,6 +70,16 @@ int LuaRRelease(lua_State* L)
 		X.mouseReleaseButton(right);
 		return 0;
 	}
+int LuaMClick(lua_State* L)
+	{
+		X.mousePressButton(middle);
+		return 0;
+	}
+int LuaMRelease(lua_State* L)
+	{
+		X.mouseReleaseButton(middle);
+		return 0;
+	}
 //Keyboard Functions:
 int LuaKeyboardCharPress(lua_State* L)
 	{
@@ -186,7 +196,7 @@ int LuaFindTemplet(lua_State* L)
 		CV::Object Obj = C.objTempletMatch( getImage(i), getImage(i2));
 		//Lua Returns:
 		lua_pushnumber(L, Obj.getX());
-		lua_pushnumber(L, Obj.getY());
+		lua_pushnumber(L, Obj.getY()+(Obj.getH()/2));
 		lua_pushnumber(L, Obj.getW());
 		lua_pushnumber(L, Obj.getH());
 		return 4;
@@ -221,6 +231,8 @@ Automata::Automata()
 		L.passFuncToLua(LuaLRelease, "LRelease");
 		L.passFuncToLua(LuaRClick, "RClick");
 		L.passFuncToLua(LuaRRelease, "RRelease");
+		L.passFuncToLua(LuaMClick, "MClick");
+		L.passFuncToLua(LuaMRelease, "MRelease");
 
 		//Keyboard:
 		//Command Keys definitions:
