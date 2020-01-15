@@ -45,8 +45,8 @@ cv::Mat loadImage(const char* c)
 //Mouse Functions:
 int LuaMoveMouse(lua_State* L)
 	{		
-		lua_Number x = lua_tonumber(L, -1);
-		lua_Number y = lua_tonumber(L, -2);
+		lua_Number y = lua_tonumber(L, -1);
+		lua_Number x = lua_tonumber(L, -2);
 		X.mouseMove( x, y );
 		return 0;
 	}
