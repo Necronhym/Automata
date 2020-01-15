@@ -55,6 +55,11 @@ RRelease();
 LClick();
 --Release left mouse button:
 LRelease();
+
+--Perform a middle button press:
+LClick();
+--Release middle mouse button:
+LRelease();
 ```
 
 #### Keyboard Acrions:
