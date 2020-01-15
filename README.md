@@ -168,9 +168,15 @@ FilterImage(int IDtoSaveImageTo, int ImageToFilter, int HighHue, int LowHue, int
 ### Extractiong Data From Images:
 
 #### Templet Mathing:
-
+Templet matching locates an image inside another image and returns it's x,y and w,h.
+```
+FindTemplet(int ImageId,int Templet)
+```
 #### Object Detection:
-
+Object detection returns a rectangles x,y and w,h drawn around object bounderies found inside an image. It is recommended to use this function in combination with image filtering.
+```
+FindObject(int ImageId);
+```
 #### OCR:
 Optical character recognition is used to scrape text from iamges and returns a string:
 ```
