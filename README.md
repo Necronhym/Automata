@@ -163,7 +163,17 @@ Masking method defines the filtering method.
 FilterImage(int IDtoSaveImageTo, int ImageToFilter, int HighHue, int LowHue, int HighSaturation, int LowSaturation, int HighValue, int LowValue, bool MatchingMethon);
 ```
 #### AlphaMasking:
-
+Alpha masking allows removeing parts of an image from antoher image using alpha transparency masks.
+Transparent parts of an image will not be removed.
+This process is split in to two parts
+Creating an alpha mask:
+```
+CreateMask(int ImageIdToSaveTo, int ImageToTurnToMask);
+```
+Applying an alpha mask:
+```
+ApplyMask(ing ImageIdToSaveTo,int ImageToApplyMaskTo, int MaskToApply)
+```
 
 ### Extractiong Data From Images:
 
