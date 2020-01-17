@@ -8,7 +8,7 @@ class Automata
 	{
 		public:
 		//Automata Initializer:
-		Automata();
+		Automata(const char* ScriptLocation);
 		void loadScript(const char* ScriptLocation);
 		void runScript();
 		~Automata();
