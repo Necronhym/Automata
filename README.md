@@ -14,6 +14,7 @@ Automata requires Lua 5.3 to handle scripting, OpenCV to handle image processing
 ```
 apt-get install libopencv-dev
 apt-get install libtesseract-dev 
+apt-get install tesseract-ocr
 apt-get install libx11-dev
 apt-get install liblua5.3-dev
 ```
